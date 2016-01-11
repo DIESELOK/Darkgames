@@ -1,0 +1,15 @@
+
+@import 'compass';
+@import "grids";
+@import "reset";
+
+@include border-box-sizing();
+.container{
+  @include container();
+  padding:0 15px;
+  overflow: hidden;
+}
+img{
+  max-width:100%;
+  height:auto;
+}
