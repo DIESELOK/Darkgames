@@ -1,3 +1,46 @@
+@font-face {
+  font-family: 'Myriad Pro Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Regular"), url("../fonts/MYRIADPRO-REGULAR.woff") format("woff");
+}
+@font-face {
+  font-family: 'Myriad Pro Condensed';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Condensed"), url("../fonts/MYRIADPRO-COND.woff") format("woff");
+}
+@font-face {
+  font-family: 'Myriad Pro Bold Condensed';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Bold Condensed"), url("../fonts/MYRIADPRO-BOLDCOND.woff") format("woff");
+}
+@font-face {
+  font-family: 'Myriad Pro Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Bold"), url("../fonts/MYRIADPRO-BOLD.woff") format("woff");
+}
+@font-face {
+  font-family: 'Arial regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Arial regular"), url("../fonts/arial-regular.woff") format("woff");
+}
+@font-face {
+  font-family: 'Arial Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Arial Bold"), url("../fonts/arial-bold.woff") format("woff");
+}
+@font-face {
+  font-family: 'aglettericacondensedc';
+  src: url("../fonts/aglettericacondensedc-webfont.eot");
+  src: url("../fonts/aglettericacondensedc-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/aglettericacondensedc-webfont.woff2") format("woff2"), url("../fonts/aglettericacondensedc-webfont.woff") format("woff"), url("../fonts/aglettericacondensedc-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 /*----------------------------------------------------------------------------------*/
 /*------------------------------RESET DEFAULT STYLES--------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -11,7 +54,7 @@ html, body {
 body {
   padding: 0;
   margin: 0;
-  font: 14px 'Arial', sans-serif;
+  font: 14px 'Myriad Pro Condensed', sans-serif;
   background: #fff;
   color: #000;
 }
@@ -58,7 +101,7 @@ table {
 
 /* line 18, ../sass/_reset.scss */
 a:link, a:visited {
-  font: 14px 'Source Sans Pro', sans-serif;
+  font: 14px 'Myriad Pro Condensed', sans-serif;
   color: #4C8BBF;
   text-decoration: none;
 }
@@ -68,6 +111,93 @@ a:hover {
   text-decoration: none;
 }
 
+/* line 1, ../sass/layout/_wrapper.scss */
+.wrapper {
+  background-image: linear-gradient(to top, #020202 0%, #020202 47%, #2d2d2d 99%, #2d2d2d 100%);
+}
+
+/* line 2, ../sass/layout/_header.scss */
+header .container {
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  top: 0;
+  left: 0;
+  min-height: 63px;
+  border: 1px #343434 solid;
+  border-radius: 0 0 7px 7px;
+  background: linear-gradient(to bottom, #212121 90%, #101010 10%);
+  padding: 0;
+}
+/* line 13, ../sass/layout/_header.scss */
+header .container h1 {
+  width: 211px;
+  height: 54px;
+  margin: 0 auto;
+  padding: 5px 25px;
+  background-image: linear-gradient(to top, #313131 0%, #2a2a2a 100%);
+}
+@media screen and (min-width: 1024px) {
+  /* line 13, ../sass/layout/_header.scss */
+  header .container h1 {
+    float: left;
+  }
+}
+/* line 23, ../sass/layout/_header.scss */
+header .container .main-navigation {
+  text-align: center;
+}
+/* line 25, ../sass/layout/_header.scss */
+header .container .main-navigation li {
+  display: inline-flex;
+  height: 30px;
+  text-transform: uppercase;
+}
+/* line 29, ../sass/layout/_header.scss */
+header .container .main-navigation li a {
+  height: 30px;
+  padding: 10%;
+  font-family: 'aglettericacondensedc';
+  font-size: 12px;
+  color: #fff;
+}
+/* line 35, ../sass/layout/_header.scss */
+header .container .main-navigation li a:hover {
+  background-image: linear-gradient(to top, #a66931 0%, #d77a0a 100%);
+  box-shadow: -1px 0 0 rgba(255, 255, 255, 0.22);
+}
+@media screen and (min-width: 1024px) {
+  /* line 29, ../sass/layout/_header.scss */
+  header .container .main-navigation li a {
+    height: 55px;
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* line 25, ../sass/layout/_header.scss */
+  header .container .main-navigation li {
+    height: 55px;
+  }
+}
+
+/* line 1, ../sass/site-parts/_hero.scss */
+.hero {
+  position: relative;
+  min-height: 343px;
+  padding-top: 27px;
+  background: url("../images/head-bg.jpg") no-repeat bottom;
+  background-size: cover;
+}
+/* line 7, ../sass/site-parts/_hero.scss */
+.hero .hero-line-top {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 27px;
+  background-color: #020202;
+  box-shadow: 0 3px 7px #000301, 0 0 1px rgba(255, 255, 255, 0.38);
+}
+
 /* line 21, ../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.9/sass/susy/language/susy/_box-sizing.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
@@ -75,7 +205,7 @@ a:hover {
   box-sizing: border-box;
 }
 
-/* line 7, ../sass/style.scss */
+/* line 60, ../sass/style.scss */
 .container {
   max-width: 1120px;
   margin-left: auto;
@@ -90,7 +220,7 @@ a:hover {
   clear: both;
 }
 
-/* line 12, ../sass/style.scss */
+/* line 65, ../sass/style.scss */
 img {
   max-width: 100%;
   height: auto;
