@@ -160,8 +160,9 @@ header .container .main-navigation li a {
   font-family: 'aglettericacondensedc';
   font-size: 12px;
   color: #fff;
+  transition: 0.5s;
 }
-/* line 35, ../sass/layout/_header.scss */
+/* line 36, ../sass/layout/_header.scss */
 header .container .main-navigation li a:hover {
   background-image: linear-gradient(to top, #a66931 0%, #d77a0a 100%);
   box-shadow: -1px 0 0 rgba(255, 255, 255, 0.22);
@@ -183,7 +184,7 @@ header .container .main-navigation li a:hover {
 /* line 1, ../sass/site-parts/_hero.scss */
 .hero {
   position: relative;
-  min-height: 343px;
+  min-height: 350px;
   padding-top: 27px;
   background: url("../images/head-bg.jpg") no-repeat bottom;
   background-size: cover;
@@ -197,6 +198,202 @@ header .container .main-navigation li a:hover {
   background-color: #020202;
   box-shadow: 0 3px 7px #000301, 0 0 1px rgba(255, 255, 255, 0.38);
 }
+/* line 15, ../sass/site-parts/_hero.scss */
+.hero .letter-search-bar {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  max-width: 920px;
+  padding: 8px 70px;
+  background-color: black;
+  border: 2px solid #343435;
+  border-bottom: 0;
+  border-radius: 10px 10px 0 0;
+  opacity: 0.9;
+  text-align: center;
+}
+@media screen and (min-width: 920px) {
+  /* line 15, ../sass/site-parts/_hero.scss */
+  .hero .letter-search-bar {
+    display: block;
+  }
+}
+/* line 33, ../sass/site-parts/_hero.scss */
+.hero .letter-search-bar li {
+  display: inline-block;
+  margin: 0 8px;
+}
+/* line 36, ../sass/site-parts/_hero.scss */
+.hero .letter-search-bar li a {
+  color: white;
+  font-size: 15px;
+  transition: 0.5s;
+}
+/* line 40, ../sass/site-parts/_hero.scss */
+.hero .letter-search-bar li a:hover {
+  color: #9e6701;
+}
+
+/* line 1, ../sass/site-parts/_search-login-panel.scss */
+.search-login-panel {
+  overflow: hidden;
+}
+/* line 3, ../sass/site-parts/_search-login-panel.scss */
+.search-login-panel .container {
+  position: relative;
+  margin-bottom: 15px;
+  padding: 7px 7px 0 7px;
+  background-image: linear-gradient(to top, #5c5c5c 0%, #0a0a0a 50%, #5c5c5c 100%);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px 20px 0 0;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.63);
+}
+/* line 11, ../sass/site-parts/_search-login-panel.scss */
+.search-login-panel .container .background-layer {
+  align-items: center;
+  border-radius: 20px 20px 0 0;
+  background-image: linear-gradient(to top, #2a2a2a 0%, #1f1f1f 52%, #5d5d5d 100%);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.14);
+}
+@media screen and (min-width: 650px) {
+  /* line 11, ../sass/site-parts/_search-login-panel.scss */
+  .search-login-panel .container .background-layer {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+  }
+}
+/* line 21, ../sass/site-parts/_search-login-panel.scss */
+.search-login-panel .container .background-layer h2 {
+  margin: 0 auto;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0 0 11px rgba(0, 3, 1, 0.57);
+  color: #b85302;
+  font-size: 15px;
+}
+@media screen and (min-width: 650px) {
+  /* line 21, ../sass/site-parts/_search-login-panel.scss */
+  .search-login-panel .container .background-layer h2 {
+    float: left;
+    margin: 0 40px 0 60px;
+  }
+}
+/* line 33, ../sass/site-parts/_search-login-panel.scss */
+.search-login-panel .container .background-layer .search-form {
+  margin: 0 auto;
+  max-width: 300px;
+  position: relative;
+}
+@media screen and (min-width: 650px) {
+  /* line 33, ../sass/site-parts/_search-login-panel.scss */
+  .search-login-panel .container .background-layer .search-form {
+    float: left;
+    margin: 0;
+  }
+}
+/* line 41, ../sass/site-parts/_search-login-panel.scss */
+.search-login-panel .container .background-layer .search-form input {
+  width: 100%;
+  padding: 7px;
+  background-color: #252525;
+  background-image: linear-gradient(to top, rgba(92, 92, 92, 0.04) 0%, rgba(10, 10, 10, 0.04) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  color: #848484;
+  font-size: 12px;
+}
+@media screen and (min-width: 1120px) {
+  /* line 41, ../sass/site-parts/_search-login-panel.scss */
+  .search-login-panel .container .background-layer .search-form input {
+    width: 300px;
+  }
+}
+/* line 54, ../sass/site-parts/_search-login-panel.scss */
+.search-login-panel .container .background-layer .search-form button {
+  position: absolute;
+  top: 6px;
+  right: 5px;
+  border: 0;
+  background: transparent;
+  color: #868585;
+}
+/* line 63, ../sass/site-parts/_search-login-panel.scss */
+.search-login-panel .container .background-layer .login-bar {
+  text-align: center;
+}
+@media screen and (min-width: 650px) {
+  /* line 63, ../sass/site-parts/_search-login-panel.scss */
+  .search-login-panel .container .background-layer .login-bar {
+    clear: both;
+    float: right;
+  }
+}
+@media screen and (min-width: 1120px) {
+  /* line 63, ../sass/site-parts/_search-login-panel.scss */
+  .search-login-panel .container .background-layer .login-bar {
+    margin-left: 31%;
+  }
+}
+/* line 72, ../sass/site-parts/_search-login-panel.scss */
+.search-login-panel .container .background-layer .login-bar li {
+  display: inline-block;
+  margin: 0 15px;
+}
+/* line 75, ../sass/site-parts/_search-login-panel.scss */
+.search-login-panel .container .background-layer .login-bar li a {
+  text-shadow: 0 1px 1px rgba(0, 3, 1, 0.65);
+  text-transform: uppercase;
+  color: #828181;
+  font-size: 13px;
+  transition: 0.5s;
+}
+/* line 81, ../sass/site-parts/_search-login-panel.scss */
+.search-login-panel .container .background-layer .login-bar li a:hover {
+  color: #9e6701;
+}
+
+/* line 1, ../sass/site-parts/_chart-lists.scss */
+.chart-lists {
+  overflow: hidden;
+  background: transparent;
+}
+/* line 4, ../sass/site-parts/_chart-lists.scss */
+.chart-lists .news-public-article {
+  max-width: 320px;
+  padding: 10px;
+  border: 1px solid #303030;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+/* line 9, ../sass/site-parts/_chart-lists.scss */
+.chart-lists .news-public-article h2 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  text-shadow: 0 0 1.4px rgba(0, 3, 1, 0.4);
+  color: #636363;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+/* line 18, ../sass/site-parts/_chart-lists.scss */
+.chart-lists .news-public-article .news-public {
+  padding: 10px 10px 2px;
+  box-shadow: inset 0 0 16px rgba(255, 255, 255, 0.1);
+  background-image: linear-gradient(to left, #58391d 0%, #58391d 1%, #21170e 4%, #111111 100%, #131313 100%);
+}
+/* line 22, ../sass/site-parts/_chart-lists.scss */
+.chart-lists .news-public-article .news-public li {
+  margin-bottom: 8px;
+}
+/* line 24, ../sass/site-parts/_chart-lists.scss */
+.chart-lists .news-public-article .news-public li a {
+  color: white;
+  font-family: Arial;
+  font-size: 11px;
+}
 
 /* line 21, ../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.9/sass/susy/language/susy/_box-sizing.scss */
 *, *:before, *:after {
@@ -205,7 +402,7 @@ header .container .main-navigation li a:hover {
   box-sizing: border-box;
 }
 
-/* line 60, ../sass/style.scss */
+/* line 62, ../sass/style.scss */
 .container {
   max-width: 1120px;
   margin-left: auto;
@@ -220,7 +417,7 @@ header .container .main-navigation li a:hover {
   clear: both;
 }
 
-/* line 65, ../sass/style.scss */
+/* line 67, ../sass/style.scss */
 img {
   max-width: 100%;
   height: auto;

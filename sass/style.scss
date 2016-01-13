@@ -55,6 +55,8 @@
 @import "layout/wrapper";
 @import "layout/header";
 @import "site-parts/hero";
+@import "site-parts/search-login-panel";
+@import "site-parts/_chart-lists";
 
 @include border-box-sizing();
 .container{
