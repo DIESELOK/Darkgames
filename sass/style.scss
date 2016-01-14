@@ -56,12 +56,13 @@
 @import "layout/header";
 @import "site-parts/hero";
 @import "site-parts/search-login-panel";
-@import "site-parts/_chart-lists";
+@import "site-parts/chart-lists";
+@import "site-parts/main-content";
 
 @include border-box-sizing();
 .container{
   @include container();
-  padding:0 15px;
+  padding:0 5px;
   overflow: hidden;
 }
 img{
