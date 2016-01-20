@@ -1,9 +1,15 @@
 .left-aside{
+  @media screen and (min-width: 773px){
+    float:left;
+    width: 208px;
+    margin-right: 5px;
+  }
+  overflow: hidden;
   .aside-navigation, .type-games-navigation, .reclame{
     background: #1a1a1a;
-    @media screen and (min-width: 430px) {
-      @include span(6 of 12);
-    }
+    @media screen and (min-width: 430px)and (max-width: 773px) {
+    @include span(6 of 12);
+  }
     h2{
       padding: 10px;
       background-image: linear-gradient(to top, #844818 0%, #f28804 100%);
@@ -38,7 +44,7 @@
     }
   }
   .type-games-navigation{
-    @media screen and (min-width: 430px) {
+    @media screen and (min-width: 430px) and (max-width: 773px) {
       @include last;
     }
   }
